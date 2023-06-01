@@ -1,0 +1,72 @@
+{% extends 'monitoramento/base_monitoramento.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+    {% block 'importacoes' %}{% endblock %}
+    <link href="{% static 'css/monitoramento.css' %}" rel="stylesheet">
+    
+{% endblock %}
+
+{% block 'conteudo' %}
+      
+        {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert {{ message.tags }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+
+<div class="container">
+    <br>
+    <div class="text-center">
+        <h3>O.F's Cadastradas</h3>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md">
+            <form action="{% url 'ofs_cadastradas' %}" method="GET">            
+            <input type="text" placeholder="Digite a O.F para filtrar..." class="form-control" name="filtro_of">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md">      
+            <input type="submit" class="btn-principal" value="Filtrar">
+            </form>
+        </div>
+    </div>
+    <br>
+
+
+    <table>
+        <tr>
+            <th>Número da O.F</th>
+            <th>Código Produto</th>
+            <th>Produto</th>
+            <th>Quantidade da O.F</th>            
+        </tr>
+        {% for cadastro in cadastros %}
+        <tr>
+            <td>{{ cadastro.numero_da_of }}</td>
+            <td>{{ cadastro.codigo_produto }}</td>
+            <td>{{ cadastro.produto }}</td>
+            <td>{{ cadastro.quantidade_of }}</td>
+            <td>
+                <a href="{% url 'editar_of' cadastro.id %}"><button type="button" class="btn btn-primary" name="editar">
+                    Editar
+                </button>
+                <a href="{% url 'delete' cadastro.id %}"><button type="button" class="btn btn-danger" name="deletar">
+                    Deletar
+                </button>
+            </td>                
+           
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">Nenhuma O.F encontrada.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

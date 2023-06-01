@@ -1,0 +1,36 @@
+{% extends 'monitoramento/base_monitoramento.html' %}
+{% load static %}
+
+{% block 'head' %}
+
+    {% block 'importacoes' %}{% endblock %}
+    <link href="{% static 'css/monitoramento.css' %}" rel="stylesheet">
+    
+{% endblock %}
+
+{% block 'conteudo' %}
+<div class="container">
+    <br>
+    <div class="text-center">
+        <h3>Editando a O.F: {{of.numero_da_of}}</h3>
+    </div>
+    <br>
+
+    <form action="{% url 'update' of.id %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+        <label>Número da O.F</label>
+        <input type="text" name="numero_da_of" class="form-control" value="{{of.numero_da_of}}">
+        <br>
+        <label>Código do Produto</label>
+        <input type="text" name="codigo_produto" class="form-control" value="{{of.codigo_produto}}">
+        <br>
+        <label>Produto</label>
+        <input type="text" name="produto" class="form-control" value="{{of.produto}}">
+        <br>
+        <label>Quantidade da O.F</label>
+        <input type="text" name="quantidade_of" class="form-control" value="{{of.quantidade_of}}">
+        <br>
+        <input type="submit" class="btn-principal" value="Editar O.F">
+    </form>
+</div>
+      
+{% endblock %}
