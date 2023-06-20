@@ -155,3 +155,7 @@ table{
 td, th{
     padding: 20px;
 }
+
+#conteudoMaquina h2 {
+    font-size: 100px;
+  }
