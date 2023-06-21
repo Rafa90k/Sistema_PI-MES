@@ -159,3 +159,7 @@ td, th{
 #conteudoMaquina h2 {
     font-size: 100px;
   }
+  #cronometro {
+    font-size: 24px;
+    font-weight: bold;
+  }

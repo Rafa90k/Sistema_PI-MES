@@ -14,8 +14,8 @@
 
 <div class="container-fluid px-4">
     <div class="row text-center">
-        <div id="conteudoMaquina" class="d-flex align-items-center justify-content-center" style="height:450px; font-size: 100px">
-
+        <div id="conteudoMaquina"  class="d-flex align-items-center justify-content-center" style="height:450px; font-size: 100px; background-color: #990000">
+            PARADA
         </div>
     </div>
 </div>
@@ -142,45 +142,7 @@
                 </div>
             </div>
         </div>
-
         <!-- Modal Código Parada-->
-<!--        <div id="codigoparada" class="modal fade">-->
-<!--            <div class="modal-dialog modal-dialog-centered" role="document">-->
-<!--                <div class="modal-content">-->
-<!--                    <div class="modal-header">-->
-<!--                        <h1 class="modal-title">Código Parada</h1>-->
-<!--                        <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>-->
-<!--                    </div>-->
-<!--                    <div class="modal-body text-color-black">-->
-<!--                        <h2>Selecione a parada desejada.</h2>-->
-<!--                        <select class="form-select">-->
-<!--                            <option></option>-->
-<!--                            <option style="background-color: #38761d" id="producao">PRODUÇÃO</option>-->
-<!--                            <option style="background-color: #ffff00" id="aguar_liberacao">AGUARDANDO LIBERAÇÃO</option>-->
-<!--                            <option style="background-color: #990000" id="prepa_Maquina">PREPARAÇÃO DE MÁQUINA</option>-->
-<!--                            <option style="background-color: #990000" id="stand_by">MÁQUINA EM STAND BY</option>-->
-<!--                            <option style="background-color: #990000" id="afiacao">AFIAÇÃO DE FERRAMENTA</option>-->
-<!--                            <option style="background-color: #990000" id="falta_ferramenta">FALTA DE FERRAMENTA</option>-->
-<!--                            <option style="background-color: #990000" id="falta_programada">FALTA DE PROGRAMADOR</option>-->
-<!--                            <option style="background-color: #990000" id="falta_operador">FALTA DE OPERADOR</option>-->
-<!--                            <option style="background-color: #990000" id="limpeza">LIMPEZA</option>-->
-<!--                            <option style="background-color: #990000" id="manutencao">MANUTENÇÃO</option>-->
-<!--                            <option style="background-color: #990000" id="ajuste">AJUSTE DE MÁQUINA</option>-->
-<!--                            <option style="background-color: #990000" id="falta_materia">FALTA DE MATÉRIA PRIMA</option>-->
-<!--                            <option style="background-color: #990000" id="falta_energia">FALTA DE ENERGIA</option>-->
-<!--                            <option style="background-color: #666666" id="intervalo">INTERVALO</option>-->
-<!--                            <option style="background-color: #a64d79" id="try_out">TRY OUT</option>-->
-<!--                            <option style="background-color: #0b5394" id="treinamento">TREINAMENTO</option>-->
-<!--                        </select>-->
-<!--                        <br>-->
-<!--                    </div>                -->
-<!--                    <div class="modal-footer">-->
-<!--                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="save">Salvar</button>-->
-<!--                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="close">Fechar</button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
         <div id="codigoparada" class="modal fade">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -195,7 +157,20 @@
                             <option data-text="PRODUÇÃO" style="background-color: #38761d" value="#38761d">PRODUÇÃO</option>
                             <option data-text="AGUARDANDO LIBERAÇÃO" style="background-color: #ffff00" value="#ffff00">AGUARDANDO LIBERAÇÃO</option>
                             <option data-text="PARADA" style="background-color: #990000" value="#990000">PARADA</option>
-                            <!-- Resto das opções omitidas para brevidade -->
+                            <option data-text="PREPARAÇÃO DE MÁQUINA" style="background-color: #990000" value="#990000">PREPARAÇÃO DE MÁQUINA</option>
+                            <option data-text="MÁQUINA EM STAND BY" style="background-color: #990000" value="#990000">MÁQUINA EM STAND BY</option>
+                            <option data-text="AFIAÇÃO DE FERRAMENTA" style="background-color: #990000" value="#990000">AFIAÇÃO DE FERRAMENTA</option>
+                            <option data-text="FALTA DE FERRAMENTA" style="background-color: #990000" value="#990000">FALTA DE FERRAMENTA</option>
+                            <option data-text="FALTA DE PROGRAMADOR" style="background-color: #990000" value="#990000">FALTA DE PROGRAMADOR</option>
+                            <option data-text="FALTA DE OPERADOR<" style="background-color: #990000" value="#990000">FALTA DE OPERADOR</option>
+                            <option data-text="LIMPEZA" style="background-color: #990000" value="#990000">LIMPEZA</option>
+                            <option data-text="MANUTENÇÃO" style="background-color: #990000" value="#990000">MANUTENÇÃO</option>
+                            <option data-text="AJUSTE DE MÁQUINA" style="background-color: #990000" value="#990000">AJUSTE DE MÁQUINA</option>
+                            <option data-text="FALTA DE MATÉRIA PRIMA" style="background-color: #990000" value="#990000">FALTA DE MATÉRIA PRIMA</option>
+                            <option data-text="FALTA DE ENERGIA" style="background-color: #990000" value="#990000">FALTA DE ENERGIA</option>
+                            <option data-text="INTERVALO" style="background-color: #666666" value="#666666">INTERVALO</option>
+                            <option data-text="TRY OUT" style="background-color: #a64d79" value="#a64d79">TRY OUT</option>
+                            <option data-text="TREINAMENTO" style="background-color: #0b5394" value="#0b5394">TREINAMENTO</option>
                         </select>
                         <br>
                     </div>
